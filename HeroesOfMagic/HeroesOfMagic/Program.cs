@@ -9,15 +9,12 @@ namespace HeroesOfMagic
     {
         static void Main(string[] args)
         {
-            Sword sword = new Sword();
+            Knight firstKnight = new Knight();
+            Knight secondKnight = new Knight();
+            Knight thridKnight = new Knight();
 
-            Knight knight = new Knight(10, "ggg", 100, 5, "Goblin", "bulletprof");
-
-        
-
-            knight.Pray();
-      
-
+            Console.WriteLine(secondKnight.ID);
+            
         }
     }
 }

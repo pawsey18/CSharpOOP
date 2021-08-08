@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace HeroesOfMagic.Heroes.Barbarian
 {
-    public class Cycloops
+    public class Goblin
     {
         private const Hero DEFAULT_HERO = Hero.Melee;
         private const int DEFAULT_LEVEL = 1;
         private const int DEFAULT_HEALTH_POINTS = 120;
         private const int DEFAULT_ABILITY_POINTS = 100;
-        private const string DEFAULT_NAME = "Cycloops";
+        private const string DEFAULT_NAME = "Goblin";
 
         private readonly ChainLink DEFAULT_BODY_ARMOR = new ChainLink();
         private readonly Hammer DEFAULT_WEAPON = new Hammer();
@@ -140,19 +140,19 @@ namespace HeroesOfMagic.Heroes.Barbarian
 
         }
 
-        public Cycloops() :
+        public Goblin() :
             this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
 
         }
 
-        public Cycloops(string name, int level) :
+        public Goblin(string name, int level) :
             this(name, level, DEFAULT_HEALTH_POINTS)
         {
 
         }
 
-        public Cycloops(string name, int level, int healthPoints)
+        public Goblin(string name, int level, int healthPoints)
         {
             this.Name = name;
             this.Level = level;

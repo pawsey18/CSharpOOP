@@ -1,17 +1,21 @@
-﻿
-using System;
-using Weapons;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-
-namespace HeroesOfMagic
+namespace HeroesOfMagic.Heroes.Warlock
 {
-    public class Knight
+    public class Archmage
     {
-        private const Hero DEFAULT_FACTION = Hero.Melee;
+        private const Hero DEFAULT_HERO = Hero.Spellcaster;
         private const int DEFAULT_LEVEL = 1;
         private const int DEFAULT_HEALTH_POINTS = 120;
         private const int DEFAULT_ABILITY_POINTS = 100;
-        private const string DEFAULT_NAME = "Swordsman";
+        private const string DEFAULT_NAME = "Archmage";
+
+        private readonly ChainLink DEFAULT_BODY_ARMOR = new ChainLink();
+        private readonly Staff DEFAULT_WEAPON = new Staff();
 
         private Hero hero;
 
@@ -22,7 +26,7 @@ namespace HeroesOfMagic
         private string name;
 
         private ChainLink bodyArmor;
-        private Sword sword;
+        private Staff weapon;
 
         public int AbilityPoints
         {
@@ -41,8 +45,8 @@ namespace HeroesOfMagic
                     throw new ArgumentOutOfRangeException(string.Empty, "Wrong value, the vale should be between 1 and 10");
                 }
             }
-        }        
-        
+        }
+
         public int HealthPoints
         {
             get
@@ -110,45 +114,68 @@ namespace HeroesOfMagic
                 }
             }
         }
-        public string BodyArmor { get; set; }
-        public Sword SwordWeapon
+        public ChainLink BodyArmor
         {
             get
             {
-                return this.sword;
+                return this.bodyArmor;
             }
             set
             {
-                this.sword = value;
+                this.bodyArmor = value;
+            }
+        }
+
+
+        public Staff Weapon
+        {
+            get
+            {
+                return this.weapon;
+            }
+            set
+            {
+                this.weapon = value;
             }
 
         }
 
-        public Knight(int abilityPoints, Hero hero, int healthPoints, int level, string name, string bodyArmor)
+        public Archmage() :
+            this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
-            this.AbilityPoints = abilityPoints;
-            this.Hero = hero;
-            this.HealthPoints = healthPoints;
-            this.Level = level;
+
+        }
+
+        public Archmage(string name, int level) :
+            this(name, level, DEFAULT_HEALTH_POINTS)
+        {
+
+        }
+
+        public Archmage(string name, int level, int healthPoints)
+        {
             this.Name = name;
-            this.BodyArmor = bodyArmor;
-            this.SwordWeapon = new Sword();
+            this.Level = level;
+            this.HealthPoints = healthPoints;
+            this.AbilityPoints = DEFAULT_ABILITY_POINTS;
+            this.Hero = DEFAULT_HERO;
+            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            this.Weapon = DEFAULT_WEAPON;
         }
 
-        public void Poke()
+        public void MagicBeam()
         {
-            
+            throw new NotImplementedException();
         }
 
-        public void Pray()
+        public void GroundQuakeSpell()
         {
-            
-
+            throw new NotImplementedException();
         }
 
-        public void DeathGlare()
+        public void RainbowOfLuck()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

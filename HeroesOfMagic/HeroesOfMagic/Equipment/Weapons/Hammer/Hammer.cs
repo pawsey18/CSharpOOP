@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeroesOfMagic.Weapons.Hammer
+namespace HeroesOfMagic
 {
     public class Hammer
     {

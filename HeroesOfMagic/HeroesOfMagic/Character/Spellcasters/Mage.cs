@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeroesOfMagic.Heroes.Barbarian
+namespace HeroesOfMagic.Heroes.Warlock
 {
-    public class Cycloops
+    public class Mage
     {
-        private const Hero DEFAULT_HERO = Hero.Melee;
+        private const Hero DEFAULT_HERO = Hero.Spellcaster;
         private const int DEFAULT_LEVEL = 1;
         private const int DEFAULT_HEALTH_POINTS = 120;
         private const int DEFAULT_ABILITY_POINTS = 100;
-        private const string DEFAULT_NAME = "Cycloops";
+        private const string DEFAULT_NAME = "Mage";
 
         private readonly ChainLink DEFAULT_BODY_ARMOR = new ChainLink();
-        private readonly Hammer DEFAULT_WEAPON = new Hammer();
+        private readonly Staff DEFAULT_WEAPON = new Staff();
 
         private Hero hero;
 
@@ -26,7 +26,7 @@ namespace HeroesOfMagic.Heroes.Barbarian
         private string name;
 
         private ChainLink bodyArmor;
-        private Hammer weapon;
+        private Staff weapon;
 
         public int AbilityPoints
         {
@@ -127,7 +127,7 @@ namespace HeroesOfMagic.Heroes.Barbarian
         }
 
 
-        public Hammer Weapon
+        public Staff Weapon
         {
             get
             {
@@ -140,19 +140,19 @@ namespace HeroesOfMagic.Heroes.Barbarian
 
         }
 
-        public Cycloops() :
+        public Mage() :
             this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
 
         }
 
-        public Cycloops(string name, int level) :
+        public Mage(string name, int level) :
             this(name, level, DEFAULT_HEALTH_POINTS)
         {
 
         }
 
-        public Cycloops(string name, int level, int healthPoints)
+        public Mage(string name, int level, int healthPoints)
         {
             this.Name = name;
             this.Level = level;
@@ -163,17 +163,17 @@ namespace HeroesOfMagic.Heroes.Barbarian
             this.Weapon = DEFAULT_WEAPON;
         }
 
-        public void Strike()
+        public void MagicBeam()
         {
             throw new NotImplementedException();
         }
 
-        public void Execute()
+        public void GroundQuakeSpell()
         {
             throw new NotImplementedException();
         }
 
-        public void SkinHarden()
+        public void RainbowOfLuck()
         {
             throw new NotImplementedException();
         }
