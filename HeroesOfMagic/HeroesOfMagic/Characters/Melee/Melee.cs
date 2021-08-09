@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace HeroesOfMagic.Character.Melee
 {
-    public class Melee : Character
-    {      private int abilityPoints;
-        
+    public abstract class Melee : Character
+    {
+        private int abilityPoints;
+
         public int AbilityPoints
         {
             get
@@ -26,6 +24,6 @@ namespace HeroesOfMagic.Character.Melee
                     throw new ArgumentOutOfRangeException(string.Empty, "Wrong value, the vale should be between 1 and 10");
                 }
             }
-        }   
+        }
     }
 }

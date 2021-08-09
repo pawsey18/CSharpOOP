@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeroesOfMagic.Character.Spellcasters
+namespace HeroesOfMagic.Characters.Interfaces
 {
-    class Spellcasters
+    public interface IDefend
     {
+        void Depend();
+     
     }
 }

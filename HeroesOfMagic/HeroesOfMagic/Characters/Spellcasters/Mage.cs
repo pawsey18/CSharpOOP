@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HeroesOfMagic.Character.Spellcasters;
+using System;
+
 
 namespace HeroesOfMagic.Heroes.Warlock
 {
-    public class Mage
+    public class Mage : Spellcaster
     {
         private const Hero DEFAULT_HERO = Hero.Spellcaster;
         private const int DEFAULT_LEVEL = 1;
@@ -163,19 +161,34 @@ namespace HeroesOfMagic.Heroes.Warlock
             this.Weapon = DEFAULT_WEAPON;
         }
 
-        public void MagicBeam()
+        public void Fireball()
         {
             throw new NotImplementedException();
         }
 
-        public void GroundQuakeSpell()
+        public void ArcaneWrath()
         {
             throw new NotImplementedException();
         }
 
-        public void RainbowOfLuck()
+        public void Meditation()
         {
             throw new NotImplementedException();
+        }
+
+        public override void Attack()
+        {
+            this.Fireball();
+        }
+
+        public override void SpecialAttack()
+        {
+            this.ArcaneWrath();
+        }
+
+        public override void Defend()
+        {
+            this.Meditation();
         }
     }
 }

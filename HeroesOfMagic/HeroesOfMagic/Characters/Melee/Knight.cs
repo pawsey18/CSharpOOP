@@ -9,30 +9,21 @@ namespace HeroesOfMagic
     public class Knight : Melee
     {
         private const Hero DEFAULT_HERO = Hero.Melee;
+
         private const int DEFAULT_LEVEL = 1;
         private const int DEFAULT_HEALTH_POINTS = 100;
         private const int DEFAULT_ABILITY_POINTS = 10;
+
         private const string DEFAULT_NAME = "Knight";
         
         private readonly ChainLink DEFAULT_BODY_ARMOR = new ChainLink();
         private readonly Sword DEFAULT_WEAPON = new Sword();
 
-        
-
-        private readonly int id;
-  
-        
-
-        
 
         private ChainLink bodyArmor;
         private Sword weapon;
 
-      
-
-
-
-     
+ 
         public ChainLink BodyArmor
         {
             get
@@ -96,6 +87,21 @@ namespace HeroesOfMagic
         }
 
         public void DeathGlare()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Attack()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void SpecialAttack()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Defend()
         {
             throw new NotImplementedException();
         }

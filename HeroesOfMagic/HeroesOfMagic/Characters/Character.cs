@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HeroesOfMagic.Characters.Interfaces;
+using System;
+
 
 namespace HeroesOfMagic.Character
 {
-    public class Character
+    public abstract class Character : IAttack, IDefend
     {
         private Hero hero;
         
@@ -82,5 +80,21 @@ namespace HeroesOfMagic.Character
                 }
             }
         }
+
+     
+
+        public void Depend()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SpecialAtack()
+        {
+            throw new NotImplementedException();
+        }
+
+        public abstract void Attack();
+        public abstract void SpecialAttack();
+        public abstract void Defend();
     }
 }
