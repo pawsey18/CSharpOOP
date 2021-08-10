@@ -1,11 +1,9 @@
 ﻿using System;
-using HeroesOfMagic;
 using HeroesOfMagic.Enums;
 using HeroesOfMagic.Equipment.Armors;
-using HeroesOfMagic.Equipment.Armors.Light;
 using HeroesOfMagic.Equipment.Weapons.Blunt;
 
-namespace MagicDestroyers.Characters.Spellcasters
+namespace HeroesOfMagic.Characters.Spellcasters
 {
 
     public class Mage : Spellcaster
@@ -31,7 +29,7 @@ namespace MagicDestroyers.Characters.Spellcasters
             base.ManaPoints = Consts.Mage.MANA_POINTS;
             base.BodyArmor = DEFAULT_BODY_ARMOR;
             base.Weapon = DEFAULT_WEAPON;
-            base.Faction = Faction.Spellcaster;
+            base.Hero = Hero.Spellcaster;
             base.IsAlive = true;
             base.Scores = 0;
         }

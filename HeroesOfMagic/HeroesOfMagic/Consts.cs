@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace HeroesOfMagic
 {
@@ -22,7 +18,7 @@ namespace HeroesOfMagic
 
             public const int HEALTH_POINTS = 120;
             public const int ABILITY_POINTS = 100;
-            public const string NAME = "war";
+            public const string NAME = "Warrior";
 
         }
 
@@ -30,30 +26,28 @@ namespace HeroesOfMagic
         {
             public const int HEALTH_POINTS = 120;
             public const int MANA_POINTS = 100;
-            public const string NAME = "Merlin";
+            public const string NAME = "Mage";
         }
 
         public static class Druid
         {
             public const int HEALTH_POINTS = 120;
             public const int MANA_POINTS = 100;
-            public const string NAME = "Cenarius";
+            public const string NAME = "Druid";
         }
 
         public static class Necromancer
         {
-
             public const int HEALTH_POINTS = 120;
             public const int MANA_POINTS = 100;
-            public const string NAME = "Necromus";
+            public const string NAME = "Deadone";
         }
 
         public static class Assassin
         {
             public const int HEALTH_POINTS = 120;
             public const int ABILITY_POINTS = 100;
-            public const string NAME = "Snark";
-
+            public const string NAME = "Quicks";
         }
     }
 }

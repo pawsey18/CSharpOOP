@@ -135,7 +135,7 @@ namespace HeroesOfMagic.Characters
 
             set
             {
-                if (value.Length >= 3 && value.Length <= 12)
+                if (value.Length >= 3 && value.Length <= 9)
                 {
                     this.name = value;
                 }

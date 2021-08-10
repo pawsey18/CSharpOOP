@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace MagicDestroyers.Characters.Spellcasters
+
+namespace HeroesOfMagic.Characters.Spellcasters
 {
     public abstract class Spellcaster : Character
     {
