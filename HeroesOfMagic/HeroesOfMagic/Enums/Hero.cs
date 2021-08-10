@@ -1,6 +1,6 @@
 ﻿
 
-namespace HeroesOfMagic
+namespace HeroesOfMagic.Enums
 {
          public enum Hero
         {

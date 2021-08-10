@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeroesOfMagic.Equipment.Armor
+
+namespace HeroesOfMagic.Equipment.Armors.Light
 {
-    class LeatherVest
+    public abstract class Leather : Armor
     {
     }
 }

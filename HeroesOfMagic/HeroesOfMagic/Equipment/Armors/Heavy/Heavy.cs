@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeroesOfMagic.Weapons.Axe.HackAndSlash
+namespace HeroesOfMagic.Equipment.Armors.Heavy
 {
-    class HackAndSlash
+    public abstract class Heavy : Armor
     {
     }
 }

@@ -1,11 +1,9 @@
 ﻿using System;
 
-
-namespace HeroesOfMagic.Character.Spellcasters
+namespace MagicDestroyers.Characters.Spellcasters
 {
     public abstract class Spellcaster : Character
     {
-
         private int manaPoints;
 
         public int ManaPoints
@@ -16,13 +14,13 @@ namespace HeroesOfMagic.Character.Spellcasters
             }
             set
             {
-                if (value >= 0 && value <= 10)
+                if (value >= 0 && value <= 100)
                 {
                     this.manaPoints = value;
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Wrong value, the vale should be between 1 and 10");
+                    throw new ArgumentOutOfRangeException(string.Empty, "Inappropriate value, the value should be >= 0 and <= 10.");
                 }
             }
         }

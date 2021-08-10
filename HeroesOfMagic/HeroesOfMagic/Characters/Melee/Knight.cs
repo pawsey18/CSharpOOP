@@ -1,109 +1,66 @@
-﻿
-using HeroesOfMagic.Character.Melee;
-using System;
-using Weapons;
+﻿using System;
+using HeroesOfMagic.Enums;
+using HeroesOfMagic.Equipment.Armors.Heavy;
 
 
-namespace HeroesOfMagic
+namespace HeroesOfMagic.Characters.Melee
 {
     public class Knight : Melee
     {
-        private const Hero DEFAULT_HERO = Hero.Melee;
+        private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
+        private readonly Hammer DEFAULT_WEAPON = new Hammer();
 
-        private const int DEFAULT_LEVEL = 1;
-        private const int DEFAULT_HEALTH_POINTS = 100;
-        private const int DEFAULT_ABILITY_POINTS = 10;
-
-        private const string DEFAULT_NAME = "Knight";
-        
-        private readonly ChainLink DEFAULT_BODY_ARMOR = new ChainLink();
-        private readonly Sword DEFAULT_WEAPON = new Sword();
-
-
-        private ChainLink bodyArmor;
-        private Sword weapon;
-
- 
-        public ChainLink BodyArmor
+        public Knight()
+            : this(Consts.Knight.NAME, 1)
         {
-            get
-            {
-                return this.bodyArmor;
-            }
-            set
-            {
-                this.bodyArmor = value;
-            }
-        }
-       
-
-        public Sword Weapon
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-
         }
 
-        public Knight() :
-            this(DEFAULT_NAME, DEFAULT_LEVEL)
+        public Knight(string name, int level)
+            : this(name, level, Consts.Knight.HEALTH_POINTS)
         {
-
-        }
-
-        public Knight(string name, int level) :
-            this(name, level, DEFAULT_HEALTH_POINTS)
-        {
-
         }
 
         public Knight(string name, int level, int healthPoints)
-        { 
-            
-            this.Name = name;
-            this.Level = level;
-            this.HealthPoints = healthPoints;
-            this.AbilityPoints = DEFAULT_ABILITY_POINTS;
-            this.Hero = DEFAULT_HERO;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
-            this.Weapon = DEFAULT_WEAPON;
-           
+        {
+            base.Name = name;
+            base.Level = level;
+            base.HealthPoints = healthPoints;
+            base.AbilityPoints = Consts.Knight.ABILITY_POINTS;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
+            base.Hero = Hero.Melee;
+            base.IsAlive = true;
+            base.Scores = 0;
         }
 
-        public void Poke()
+        public int HolyBlow()
+        {
+            return base.Weapon.DamagePoints + 10;
+        }
+
+        public int PurifySoul()
         {
             throw new NotImplementedException();
         }
 
-        public void Pray()
+        public int RighteousWings()
         {
-            throw new NotImplementedException();
-
+            return base.BodyArmor.ArmorPoints + 5;
         }
 
-        public void DeathGlare()
+        public override int Attack()
         {
-            throw new NotImplementedException();
+            return this.HolyBlow();
         }
 
-        public override void Attack()
+        public override int SpecialAttack()
         {
-            throw new NotImplementedException();
+            return this.PurifySoul();
         }
 
-        public override void SpecialAttack()
+        public override int Defend()
         {
-            throw new NotImplementedException();
-        }
-
-        public override void Defend()
-        {
-            throw new NotImplementedException();
+            return this.RighteousWings();
         }
     }
 }

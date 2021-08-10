@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeroesOfMagic.Weapons.Hammer.Stun
+namespace HeroesOfMagic.Equipment.Weapons.Blunt
 {
-    class Stun
+    public abstract class Blunt : Weapon
     {
     }
 }

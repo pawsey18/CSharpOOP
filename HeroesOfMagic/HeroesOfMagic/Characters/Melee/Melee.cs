@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace HeroesOfMagic.Character.Melee
+namespace HeroesOfMagic.Characters.Melee
 {
     public abstract class Melee : Character
     {
